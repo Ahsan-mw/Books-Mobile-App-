@@ -1,7 +1,6 @@
 import 'package:books_mobile_app/core/utils/constants/app_colors.dart';
 import 'package:books_mobile_app/core/utils/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 
 class MobileAppBarTheme{

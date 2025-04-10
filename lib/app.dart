@@ -1,3 +1,5 @@
+import 'package:books_mobile_app/core/utils/theme/theme.dart';
+import 'package:books_mobile_app/features/onboarding/presentation/screen/onboarding_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +9,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Placeholder(),
+      theme:MobileAppTheme.lightTheme,
+      debugShowCheckedModeBanner: false,
+      home: OnboardingScreen(),
     );
   }
 }
