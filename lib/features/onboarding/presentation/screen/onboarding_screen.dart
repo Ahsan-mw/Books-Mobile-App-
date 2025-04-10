@@ -15,12 +15,12 @@ class OnboardingScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final onBoardingNotifier = ref.read(onBoardingProvider.notifier);
-
+    final onBordingState= ref.watch(onBoardingProvider);
+      // final PageController pageController = PageController();
     return Scaffold(
       appBar: AppBar(
         title: TextButton(
           onPressed: () {
-            onBoardingNotifier.skipButton(); // Skip to the last page
           },
           child: Text("Skip", style: Theme.of(context).textTheme.bodyMedium),
         ),
@@ -62,6 +62,7 @@ class OnboardingScreen extends ConsumerWidget {
                   SmoothPageIndicator(
                     controller: onBoardingNotifier.controller,
                     count: 3,
+
                     effect: ScrollingDotsEffect(dotHeight: 10),
                   ),
                   SizedBox(height: AppSizes.spaceBtwSections),
@@ -69,7 +70,8 @@ class OnboardingScreen extends ConsumerWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
-                        onBoardingNotifier.nextPage(); // Navigate to next page
+                        onBoardingNotifier.nextPage();
+
                       },
                       child: Text("Next"),
                     ),
