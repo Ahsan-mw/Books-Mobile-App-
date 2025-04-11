@@ -16,6 +16,7 @@ class OnboardingScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final onBoardingNotifier = ref.read(onBoardingProvider.notifier);
     final onBordingState= ref.watch(onBoardingProvider);
+
       // final PageController pageController = PageController();
     return Scaffold(
       appBar: AppBar(

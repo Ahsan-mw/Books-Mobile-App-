@@ -8,6 +8,8 @@ class AssetsRes {
 
   static const String PROJECT_NAME = 'books_mobile_app';
   static const String PROJECT_VERSION = '1.0.0+1';
+  static const String APPLEICON = 'assets/images/icons/appleIcon.svg';
+  static const String GOOGLEICON = 'assets/images/icons/googleIcon.svg';
   static const String ONBOOARDIGIMG1 = 'assets/images/onboarding/onbooardigimg1.png';
   static const String ONBOOARDIGIMG2 = 'assets/images/onboarding/onbooardigimg2.png';
   static const String ONBOOARDIGIMG3 = 'assets/images/onboarding/onbooardigimg3.png';

@@ -24,7 +24,7 @@ class OnboardingController extends Notifier<int> {
       controller.animateToPage(
         state,
 
-      duration: Duration(microseconds: 3000), curve: Curves.easeInBack);
+      duration: Duration(microseconds: 3000), curve: Curves.easeIn);
 
 
     }
@@ -35,3 +35,4 @@ class OnboardingController extends Notifier<int> {
 
 
 }
+
