@@ -19,67 +19,73 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-
-
-          SignUpForm(),
-
-          SizedBox(height: AppSizes.spaceBtwSections),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Have have an Account?",
-                style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  color: AppColors.textLightGreyColor,
-                ),
-              ),
-              SizedBox(width: AppSizes.spaceBtwItems / 6),
-              TextButton(
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero, //
-                  minimumSize: Size(0, 0),
-                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                ),
-                onPressed: () {},
-                child: Text(
-                  "Sign In",
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge!.copyWith(color: AppColors.primary),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: AppSizes.spaceBtwItems),
-
-          Spacer(),
-
-          Center(
-            child: Column(
-
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+        
+        
+            SignUpForm(),
+        
+            SizedBox(height: AppSizes.spaceBtwSections),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "By clicking Register, you agree to our ",
+                  "Have have an Account?",
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: AppColors.textLightGreyColor,
                   ),
                 ),
-                SizedBox(height: AppSizes.spaceBtwItems / 5),
-                Text(
-                  "Terms and Data Policy.",
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge!.copyWith(color: AppColors.primary),
+                SizedBox(width: AppSizes.spaceBtwItems / 6),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero, //
+                    minimumSize: Size(0, 0),
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "Sign In",
+                    style: Theme.of(
+                      context,
+                    ).textTheme.titleLarge!.copyWith(color: AppColors.primary),
+                  ),
                 ),
               ],
             ),
-          ),
-          SizedBox(height: AppDeviceUtils.getBottomNavigationBarHeight()),
-        ],
+            SizedBox(height: AppSizes.spaceBtwItems),
+
+        
+              SizedBox(
+                height: AppDeviceUtils.getScreenHeight(context)*0.08,
+              ),
+        
+            Center(
+              child: Column(
+
+
+                children: [
+                  Text(
+                    "By clicking Register, you agree to our ",
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      color: AppColors.textLightGreyColor,
+                    ),
+                  ),
+                  SizedBox(height: AppSizes.spaceBtwItems / 5),
+                  Text(
+                    "Terms and Data Policy.",
+                    style: Theme.of(
+                      context,
+                    ).textTheme.titleLarge!.copyWith(color: AppColors.primary),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: AppDeviceUtils.getBottomNavigationBarHeight()),
+          ],
+        ),
       ),
     );
   }
