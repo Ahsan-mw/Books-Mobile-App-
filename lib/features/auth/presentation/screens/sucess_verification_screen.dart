@@ -31,7 +31,7 @@ class SucessVerificationScreen extends StatelessWidget {
                   color: AppColors.textLightGreyColor,
               ),
               textAlign: TextAlign.center,),
-            
+
             SizedBox(
               height: AppSizes.spaceBtwItems,
             ),
